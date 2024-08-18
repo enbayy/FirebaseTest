@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../Firebase';
 
 function Home() {
+    const [information, setInformation] = useState("");
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setInformation(user.email)
+            } else {
+            }
+        });
+    },)
+
     return (
-        <div>Home</div>
+        <div>Home {information}</div>
     )
 }
 

@@ -1,13 +1,13 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Auth from './pages/Auth'
+import RouterConfig from './config/RouterConfig'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <Auth />
+      <RouterConfig />
     </>
   )
 }
